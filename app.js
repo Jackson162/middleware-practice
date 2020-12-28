@@ -1,6 +1,5 @@
 const express = require('express')
 const serverLog = require('./functions')
-const { PerformanceObserver, performance } = require('perf_hooks');
 const app = express()
 const port = 3000
 
