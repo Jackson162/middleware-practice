@@ -10,11 +10,13 @@ app.use((req, res, next) => {
   req.headers['requestReceivedTime'] = new Date(Date.now())
   
   res.on('finish', () => {
-    serverLog(req, 'finish', req.headers['requestReceivedTime'], processStart)
+    const processEnd = process.hrtime.bigint()
+    serverLog(req, 'finish', req.headers['requestReceivedTime'], processStart, processEnd)
   })
 
   res.on('close', () => {
-    serverLog(req, 'close', req.headers['requestReceivedTime'], processStart)
+    const processEnd = process.hrtime.bigint()
+    serverLog(req, 'close', req.headers['requestReceivedTime'], processStart, processEnd)
   })
   return next()
 })
