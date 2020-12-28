@@ -33,19 +33,11 @@ git clone https://github.com/Jackson162/middleware-practice.git
 ```
 npm install
 ```
-3. 確認 mongoDB 執行後，連結 Robo 3T，建立一個資料庫，命名:
-```
-restaurant-list
-```
-4. 在終端機輸入指令來連結資料庫並新增種子資料:
-```
-npm run seed
-```
-5. 啟動伺服器，執行專案:
+3. 啟動伺服器，執行專案:
 ```
 npm run dev
 ```
-6. 打開瀏覽器，搜尋:
+4. 打開瀏覽器，搜尋:
 ```
 http://localhost/3000
 ```
